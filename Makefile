@@ -7,6 +7,7 @@ clean:
 .PHONY: install
 install:
 	cp .githooks/* .git/hooks/
+	chmod u+x .git/hooks/*
 	npm install @redocly/cli -g
 
 # make redocbuild build the redoc documentation
