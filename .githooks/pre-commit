@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if git diff --cached --name-only --diff-filter=AM | grep '^docs/api/.*'; then
+	make redocbuild
+	git add ./docs/api/document/*
+fi

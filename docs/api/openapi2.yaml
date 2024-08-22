@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: Good API
+  version: 1.0.0
+paths:
+  /goods:
+    post:
+      summary: Create a good
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GoodRequest"
+      responses:
+        "200":
+          description: Good created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GoodResponse"
+components:
+  schemas:
+    GoodRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+          format: double
+    GoodResponse:
+      type: object
+      properties:
+        message:
+          type: string
