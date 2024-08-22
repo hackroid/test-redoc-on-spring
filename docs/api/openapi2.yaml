@@ -5,7 +5,7 @@ info:
 paths:
   /goods:
     post:
-      summary: Create a good
+      summary: Create a good [lalala]
       requestBody:
         required: true
         content:
