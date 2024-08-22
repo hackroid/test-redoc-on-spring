@@ -19,6 +19,58 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GoodResponse"
+  /goods/{id}:
+    get:
+      summary: Get a good
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Good retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GoodResponse"
+    put:
+      summary: Update a good
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GoodRequest"
+      responses:
+        "200":
+          description: Good updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GoodResponse"
+    delete:
+      summary: Delete a good
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Good deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GoodResponse"
 components:
   schemas:
     GoodRequest:
