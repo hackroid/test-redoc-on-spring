@@ -3,7 +3,7 @@ plugins {
 	kotlin("plugin.spring") version "1.9.24"
 	id("org.springframework.boot") version "3.2.8"
 	id("io.spring.dependency-management") version "1.1.6"
-	kotlin("plugin.jpa") version "1.9.24"
+	kotlin("plugin.jpa") version "2.0.20"
 }
 
 group = "com.hackroid"
